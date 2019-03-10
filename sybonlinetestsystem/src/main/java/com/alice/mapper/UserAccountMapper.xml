@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.alice.mapper.UserAccountMapper">
+<mapper namespace="com.alice.mapper.IUserAccountMapper">
 
     <select id="verifyUserLogin" resultType="Integer">
       select count(1) from  user_account_info where  number = #{param1} and  password = #{param2};

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 用户账号mapper
  */
-public interface UserAccountMapper {
+public interface IUserAccountMapper {
 
     void addUser(UserAccountEntity user);
 
