@@ -5,5 +5,5 @@ package com.alice.service;
  */
 public interface IUserLoginService {
 
-    void verifyLoginUser(String number, String password);
+    Integer verifyLoginUser(String number, String password);
 }

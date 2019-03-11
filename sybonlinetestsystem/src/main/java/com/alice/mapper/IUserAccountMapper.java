@@ -2,6 +2,7 @@ package com.alice.mapper;
 
 import com.alice.entity.UserAccountEntity;
 import com.alice.model.KeyValueVO;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,5 +17,5 @@ public interface IUserAccountMapper {
 
     void updateUser(List<KeyValueVO> fieldAndValues);
 
-    void verifyUserLogin(String number, String password);
+    Integer verifyUserLogin(@Param("number") String number, @Param("password") String password);
 }

@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 public class IUserLoginServiceImpl implements IUserLoginService {
 
     @Autowired
-    private IUserAccountMapper IUserAccountMapper;
+    private IUserAccountMapper userAccountMapper;
 
     @Override
-    public void verifyLoginUser(String number, String password) {
-        IUserAccountMapper.verifyUserLogin(number, password);
+    public Integer verifyLoginUser(String number, String password) {
+        return  userAccountMapper.verifyUserLogin(number, password);
     }
 }
