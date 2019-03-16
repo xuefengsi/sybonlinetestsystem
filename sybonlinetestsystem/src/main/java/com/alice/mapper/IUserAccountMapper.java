@@ -17,5 +17,7 @@ public interface IUserAccountMapper {
 
     void updateUser(List<KeyValueVO> fieldAndValues);
 
-    Integer verifyUserLogin(@Param("number") String number, @Param("password") String password);
+    UserAccountEntity verifyUserLogin(@Param("number") String number, @Param("password") String password);
+
+
 }

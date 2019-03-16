@@ -1,3 +1,4 @@
+import com.alice.entity.UserAccountEntity;
 import com.alice.service.impl.IUserLoginServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,7 @@ public class TestUnitl
     @Test
     public void testForConfig()
     {
-        Integer test = userLoginService.verifyLoginUser("123456","123456");
+        UserAccountEntity test = userLoginService.verifyLoginUser("123456","123456");
         System.out.println("搜索的结果：" + test);
     }
 }

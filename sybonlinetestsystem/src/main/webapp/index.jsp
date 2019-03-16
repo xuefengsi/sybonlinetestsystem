@@ -7,12 +7,12 @@
 </head>
 <body style="text-align: center">
     <img src="" height="600" width="100%" />
-    <form action="http://localhost:8080/sybonlinetestsystem_war_exploded/login/test.action" method="post">
+    <form action="http://localhost:8080/sybonlinetestsystem_war_exploded/login/verify.action" method="post">
         <div style="margin: 0 auto">
             <label>用户名：</label>
-            <input type="text" />
+            <input type="text" name="number" />
             <label>密  码：</label>
-            <input type="password" />
+            <input type="password" name="password" />
             <input type="submit" value="登 录" style="display: inline-block; width: 100px" />
         </div>
     </form>

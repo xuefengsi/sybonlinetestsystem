@@ -1,0 +1,57 @@
+#mainMenu{
+    border: 1px solid #E5EFFE;
+    background-color: #E5EFFE;
+    width: 200px;
+}
+#menuNav{
+    width: 200px;
+}
+#mainMenu:hover{
+    background-color: #E5EEEE;
+}
+#leftNav{
+    width: 200px;
+    height: 780px;
+    border: 1px solid #E5EFFE;
+    float: left;
+}
+#forInterval{
+    float: left;
+    width: 8px;
+    height: 500px;
+    border: 1px solid #E5EFFE;
+}
+#rightNav{
+    width: 65%;
+    float: left;
+}
+#ownFrame{
+    float: left;
+    width: 80%;
+    margin-bottom: 5px;
+    border: 1px solid #E5EFFE;
+    background-color: #E5EFFE;
+}
+#content{
+    width: 100%;
+    height: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menuNav ul li{
+    list-style-type: none;
+    margin: 2px auto;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#clearFloat{
+    clear: both;
+}
