@@ -20,7 +20,7 @@
 
     <div style="height: 30px;background-color: #0a73a7">
         <span style="color: white">欢迎【${admin.name}】登录SYB考试管理系统</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="button" value="退出" style="display: inline-block;width: 40px;height: 30px">
+        <a href="${pageContext.request.contextPath}/index.jsp">退出</a>
     </div>
 
     <div id="clearFloat">
@@ -32,15 +32,20 @@
             <div id="mainMenu">
                 <span>主菜单</span>
             </div>
-            <form action="" method="get">
-                <div id="menuNav">
-                    <ul>
-                        <li><a href="" target="iframe_a">成绩管理</a></li>
-                        <li><a href="" target="iframe_a">学生管理</a></li>
-                        <li><a href="" target="iframe_a">考试管理</a></li>
-                    </ul>
-                </div>
-            </form>
+            <div id="menuNav">
+                <ul>
+                    <form action="http://localhost:8080/sybonlinetestsystem_war_exploded/syb_online_test/gradeManage.action" method="get" target="iframe_a" name="gradeManage_form">
+                        <li><a href="javascript:document:gradeManage_form.submit();" name="category">成绩管理</a></li>
+                    </form>
+                    <form action="http://localhost:8080/sybonlinetestsystem_war_exploded/syb_online_test/studentManage.action" method="get" target="iframe_a" name="studentManage_form">
+                        <li><a href="javascript:document:studentManage_form.submit();" target="iframe_a">学生管理</a></li>
+                    </form>
+                    <form action="http://localhost:8080/sybonlinetestsystem_war_exploded/syb_online_test/testManage.action" method="get" target="iframe_a" name="testManage_form">
+                        <li><a href="javascript:document:testManage_form.submit();" target="iframe_a">考试管理</a></li>
+                    </form>
+                </ul>
+            </div>
+
         </div>
 
         <div id="forInterval">

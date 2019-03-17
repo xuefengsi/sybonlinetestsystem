@@ -7,4 +7,48 @@
     <select id="getAdminInfoById" resultType="com.alice.entity.AdminInfoEntity">
       select * from  admin_info where  adminNumber = #{param1};
     </select>
+
+    <select id="getAllGradeManageVO" resultType="com.alice.model.GradeManageVO">
+      select
+        stu.studentNumber as studentNumber,
+        stu.`name` as studentName,
+        stu.gender as gender,
+        stu.grade as studentGrade,
+        stu.department as department,
+        tr.score as score,
+        tr.`owner` as belongTeacher
+        from student_info stu left join
+      (select number, score, `owner` from test_result_info)tr on stu.studentNumber = tr.number
+    </select>
+
+    <select id="getAllGradeManageVOFilter" resultType="com.alice.model.GradeManageVO">
+      select
+        stu.studentNumber as studentNumber,
+        stu.`name` as studentName,
+        stu.gender as gender,
+        stu.grade as studentGrade,
+        stu.department as department,
+        tr.score as score,
+        tr.`owner` as belongTeacher
+        from student_info stu left join
+      (select
+      number,
+      score,
+      `owner`
+      from test_result_info
+      <if test="minScore != null">
+        where score &gt;= #{minScore}
+      </if>
+        <if test="maxScore != null">
+            and score &lt;= #{maxScore}
+        </if>)tr
+      on stu.studentNumber = tr.number
+      where
+          <if test="studentNumber != null and studentNumber != ''">
+            stu.studentNumber = #{studentNumber}
+          </if>
+          <if test="studentName != null and studentName != ''">
+            and stu.studentName = #{studentName}
+          </if>
+    </select>
 </mapper>
